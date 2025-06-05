@@ -102,7 +102,7 @@ header {
 
 header.scrolled {
     padding: 15px 0;
-    background-color: black
+    background-color: white 
 }
 header .container {
     display: flex;
