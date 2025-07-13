@@ -593,6 +593,65 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
 }
+.new-footer {
+    background-color: #2c3e50; /* Dark blue background */
+    color: #ecf0f1; /* Light text color */
+    padding: 30px 0 10px; /* Top padding larger than bottom */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle top shadow */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom {
+    margin-bottom: 15px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 15px;
+    color: #bdc3c7; /* Slightly lighter text */
+}
+
+.design-credit {
+    font-size: 13px;
+    color: #95a5a6; /* Light gray text */
+    margin: 5px 0;
+}
+
+.design-credit a {
+    color: #3498db; /* Vibrant link color */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.design-credit a:hover {
+    color: #1abc9c; /* Hover color */
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-bottom,
+    .design-credit {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
 
 /* WhatsApp Floating Button Style */
         .whatsapp-float {
