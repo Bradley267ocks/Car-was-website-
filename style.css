@@ -601,9 +601,9 @@ footer {
   right: 20px;
   background-color: #25D366;
   color: white;
-  font-size: 30px;
+  font-size: 24px;
   padding: 15px;
-  border-radius: 7%;
+  border-radius: 15%;
   z-index: 1000;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
