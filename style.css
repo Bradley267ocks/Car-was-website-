@@ -601,8 +601,8 @@ footer {
   background-color: #25D366;
   color: white;
   font-size: 16px; /* Adjusted for text */
-  padding: 12px 20px;
-  border-radius: 50px; /* Changed to pill shape */
+  padding: 10px 15px;
+  border-radius: 100px; /* Changed to pill shape */
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   text-decoration: none;
