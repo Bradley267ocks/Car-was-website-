@@ -526,8 +526,8 @@ nav a:hover::after {
     min-height: 100px;
     }
 
-/* Footer Styles */
-.new-footer {
+/* Footer */
+footer {
     background-color: var(--dark-color);
     color: white;
     padding: 60px 0 0;
@@ -550,7 +550,6 @@ nav a:hover::after {
     margin-bottom: 25px;
     position: relative;
     padding-bottom: 10px;
-    font-size: 1.4rem;
 }
 
 .footer-links h3::after,
@@ -566,7 +565,6 @@ nav a:hover::after {
 
 .footer-links ul {
     list-style: none;
-    padding: 0;
 }
 
 .footer-links li {
@@ -574,11 +572,7 @@ nav a:hover::after {
 }
 
 .footer-links a {
-    color: #bdc3c7;
-    text-decoration: none;
     transition: var(--transition);
-    display: block;
-    padding: 5px 0;
 }
 
 .footer-links a:hover {
@@ -588,57 +582,17 @@ nav a:hover::after {
 
 .footer-contact p {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-    color: #bdc3c7;
 }
 
-.footer-contact i {
-    color: var(--accent-color);
-    margin-top: 5px;
-}
-
-/* Footer Bottom with Design Credit */
-.footer-bottom-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer-bottom {
+    text-align: center;
     padding: 20px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
 }
-
-.copyright {
-    color: #95a5a6;
-    margin: 0;
-}
-
-.design-credit {
-    color: #95a5a6;
-    margin: 0;
-}
-
-.design-credit a {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: var(--transition);
-    font-weight: 600;
-}
-
-.design-credit a:hover {
-    color: #1abc9c;
-    text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .footer-bottom-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
 
 /* WhatsApp Floating Button Style */
         .whatsapp-float {
