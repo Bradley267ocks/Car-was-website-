@@ -89,57 +89,12 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.reset();
         });
     }
-    
-    // Chat Widget
-    const chatButton = document.querySelector('.chat-button');
-    const chatWidget = document.querySelector('.chat-widget');
-    const closeChat = document.querySelector('.close-chat');
-    
-    chatButton.addEventListener('click', function() {
-        chatWidget.classList.add('active');
-    });
-    
-    closeChat.addEventListener('click', function() {
-        chatWidget.classList.remove('active');
-    });
-    
-    // Simulate chat functionality
-    const chatInput = document.querySelector('.chat-input input');
-    const chatSendBtn = document.querySelector('.chat-input button');
-    const chatMessages = document.querySelector('.chat-messages');
-    
-    function addMessage(text, isReceived) {
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('chat-bubble');
-        messageDiv.classList.add(isReceived ? 'received' : 'sent');
-        messageDiv.textContent = text;
-        chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-    
-    // Initial bot message
-    addMessage("Hello! How can we help you today?", true);
-    
-    chatSendBtn.addEventListener('click', function() {
-        const message = chatInput.value.trim();
-        if (message) {
-            addMessage(message, false);
-            chatInput.value = '';
-            
-            // Simulate bot reply after a delay
-            setTimeout(() => {
-                addMessage("Thanks for your message! Our team will get back to you soon.", true);
-            }, 1000);
-        }
-    });
-    
-    chatInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            chatSendBtn.click();
-        }
-    });
-    
-    // Animation on scroll
+    // Optional script — adds a simple log to confirm it's running
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("WhatsApp button is active.");
+});
+
+  // Animation on scroll
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.service-card, .offer-card, .about-image, .contact-form');
         
