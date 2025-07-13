@@ -613,6 +613,13 @@ footer {
 .whatsapp-float:hover {
   background-color:  #1a3e2f;
 }
+.whatsapp-float {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px; /* Adjust padding as needed */
+  /* Maintain your existing positioning styles */
+}
 
 
 /* Animations */
