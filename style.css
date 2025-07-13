@@ -611,7 +611,7 @@ footer {
 }
 
 .whatsapp-float:hover {
-  background-color: #1ebd5b;
+  background-color:  #1a3e2f;
 }
 
 
@@ -698,10 +698,5 @@ footer {
     
     .hero-content p {
         font-size: 1rem;
-    }
-    
-    .chat-widget {
-        width: 90%;
-        right: 5%;
     }
 }
