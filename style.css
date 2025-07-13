@@ -593,30 +593,33 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
 }
-/* WhatsApp Floating Button Style */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  font-size: 16px; /* Adjusted for text */
-  padding: 10px 15px;
-  border-radius: 100px; /* Changed to pill shape */
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease; /* Smooth hover effects */
-}
-
-.whatsapp-float:hover {
-  background-color: #128C7E; /* WhatsApp's official dark green */
-  transform: translateY(-3px); /* Slight lift effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
+ /* WhatsApp Floating Button Style */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background-color: #25D366;
+            color: white;
+            font-size: 14px;
+            padding: 10px 16px;
+            border-radius: 24px;
+            z-index: 1000;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float i {
+            font-size: 20px;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
 
 /* Optional: Add animation for attention */
 @keyframes pulse {
