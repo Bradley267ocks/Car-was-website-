@@ -593,45 +593,6 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
 }
-/* Updated Footer */
-        .new-footer {
-            background-color:var(--dark) ;
-            color: #ccc;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 14px;
-        }
-
-        .new-footer p {
-            margin: 0;
-        }
-
-        .new-footer a {
-            color: #00ffcc;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .new-footer a:hover {
-            color: #9aba3f;
-            text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
-        }
-
-        .new-footer a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--dark);
-            transition: width 0.3s ease;
-        }
-
-        .new-footer a:hover::after {
-            width: 100%;
-        }
 
 /* WhatsApp Floating Button Style */
         .whatsapp-float {
