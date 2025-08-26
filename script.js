@@ -70,6 +70,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Lightbox Functions
+function openLightbox(img) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
     // Form submission
     const contactForm = document.getElementById('washForm');
     if (contactForm) {
