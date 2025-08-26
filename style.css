@@ -254,16 +254,27 @@ nav a:hover::after {
 /* Services Section */
 .services {
     background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
 }
 
+.services .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Grid for main services */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
+    margin-bottom: 40px;
 }
 
-.service-card {
-    background-color: white;
+.service-card,
+.price-card {
+    background-color: #fff;
     padding: 30px;
     border-radius: 8px;
     text-align: center;
@@ -271,11 +282,13 @@ nav a:hover::after {
     transition: var(--transition);
 }
 
-.service-card:hover {
+.service-card:hover,
+.price-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Service icons */
 .service-icon {
     width: 80px;
     height: 80px;
@@ -295,6 +308,7 @@ nav a:hover::after {
     color: white;
 }
 
+/* Price text for service cards */
 .price {
     display: inline-block;
     margin-top: 15px;
@@ -302,6 +316,53 @@ nav a:hover::after {
     color: var(--primary-color);
     font-size: 1.2rem;
 }
+
+/* Extra price cards section */
+.price-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.price-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.price-card ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.price-card ul li span {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services {
+        padding: 40px 15px;
+    }
+    .services .section-title {
+        font-size: 24px;
+    }
+    .service-card h3,
+    .price-card h3 {
+        font-size: 18px;
+    }
+
+
 
 
 /* Offers Section */
