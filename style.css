@@ -32,7 +32,7 @@ body {
 }
 
 section {
-    padding: 80px 0;
+    padding: 100px 0; /* Increased top padding for fixed header */
 }
 
 h1, h2, h3, h4 {
@@ -102,8 +102,9 @@ header {
 
 header.scrolled {
     padding: 15px 0;
-    background-color:var(--primary-color); 
+    background-color: var(--primary-color);
 }
+
 header .container {
     display: flex;
     align-items: center;
@@ -120,11 +121,6 @@ header .container {
     height: 90px;
 }
 
-.logo h1 {
-    margin: 0;
-    font-size: 1.9rem;
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -134,6 +130,7 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 30px;
+    position: relative;
 }
 
 nav a:hover {
@@ -154,12 +151,13 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+
 .mobile-menu {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    order: -1; /* This moves it to the beginning of the flex container */
-    margin-right: auto; /* Pushes everything else to the right */
+    order: -1;
+    margin-right: auto;
 }
 
 /* Hero Section */
@@ -264,7 +262,6 @@ nav a:hover::after {
     color: #333;
 }
 
-/* Grid for main services */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -288,7 +285,6 @@ nav a:hover::after {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Service icons */
 .service-icon {
     width: 80px;
     height: 80px;
@@ -308,7 +304,6 @@ nav a:hover::after {
     color: white;
 }
 
-/* Price text for service cards */
 .price {
     display: inline-block;
     margin-top: 15px;
@@ -317,7 +312,6 @@ nav a:hover::after {
     font-size: 1.2rem;
 }
 
-/* Extra price cards section */
 .price-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -349,26 +343,11 @@ nav a:hover::after {
     color: var(--primary-color);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .services {
-        padding: 40px 15px;
-    }
-    .services .section-title {
-        font-size: 24px;
-    }
-    .service-card h3,
-    .price-card h3 {
-        font-size: 18px;
-    }
-
-
-
-
 /* Offers Section */
 .offers {
     background-color: var(--light-color);
-    color: white;
+    color: var(--text-color);
+    padding: 60px 20px;
 }
 
 .offer-cards {
@@ -393,10 +372,6 @@ nav a:hover::after {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.offer-card.popular {
-    border: 2px solid var(--accent-color);
-}
-
 .offer-badge {
     position: absolute;
     top: -15px;
@@ -407,23 +382,6 @@ nav a:hover::after {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
-}
-
-.offer-price {
-    margin: 20px 0;
-}
-
-.old-price {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 1.2rem;
-}
-
-.new-price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    display: block;
 }
 
 .check-list {
@@ -442,14 +400,13 @@ nav a:hover::after {
 }
 
 .check-list li::before {
-  content: "✔";  /* Check mark icon */
+  content: "✔";
   position: absolute;
   left: 0;
   top: 0;
-  color: #4caf50; /* Your orange theme color */
+  color: #4caf50;
   font-weight: bold;
 }
-
 
 /* About Section */
 .about {
@@ -460,14 +417,17 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     gap: 50px;
+    flex-wrap: wrap;
 }
 
 .about-content {
     flex: 1;
+    min-width: 280px;
 }
 
 .about-image {
     flex: 1;
+    min-width: 280px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -515,85 +475,50 @@ nav a:hover::after {
 
 .feature:hover i {
     color: white;
-
 }
 
 /* Gallery Section */
 .gallery-section {
-  padding: 60px 20px;
-  background: #f9f9f9;
-  text-align: center;
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
 }
 
 .gallery-section .section-title {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 .gallery-section .section-subtitle {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 40px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .gallery-item {
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
 }
 
 .gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease;
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
 .gallery-item img:hover {
-  transform: scale(1.08);
+    transform: scale(1.08);
 }
-
-/* Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  margin: auto;
-  display: block;
-}
-
-.lightbox .close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-
 
 /* Contact Section */
 .contact-container {
@@ -603,63 +528,20 @@ nav a:hover::after {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: var(--shadow);
+    flex-wrap: wrap;
 }
 
 .contact-info {
     flex: 1;
+    min-width: 280px;
     padding: 40px;
     background-color: var(--primary-color);
     color: white;
 }
 
-.contact-info h3 {
-    color: white;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.contact-info h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: var(--accent-color);
-}
-
-.contact-info p {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition: var(--transition);
-}
-
-.social-links a:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-3px);
-}
-
 .contact-form {
     flex: 1;
+    min-width: 280px;
     padding: 40px;
 }
 
@@ -689,7 +571,7 @@ nav a:hover::after {
 .form-group textarea {
     resize: vertical;
     min-height: 100px;
-    }
+}
 
 /* Footer */
 footer {
@@ -760,47 +642,38 @@ footer {
 }
 
 /* WhatsApp Floating Button Style */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 15px;
-
-            
-            
-            
-            
-            right: 15px;
-            background-color: #25D366;
-            color: white;
-            font-size: 14px;
-            padding: 10px 16px;
-            border-radius: 24px;
-            z-index: 1000;
-            text-decoration: none;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-        }
-        
-        .whatsapp-float i {
-            font-size: 20px;
-        }
-        
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.05);
-        }
-
-/* Optional: Add animation for attention */
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+.whatsapp-float {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: #25D366;
+    color: white;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 24px;
+    z-index: 1000;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
 }
 
-.whatsapp-float {
-  animation: pulse 2s infinite; /* Remove if unwanted */
+.whatsapp-float i {
+    font-size: 20px;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
 /* Animations */
@@ -810,31 +683,20 @@ footer {
 }
 
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
     .about .container {
         flex-direction: column;
+        text-align: center;
     }
     
     .contact-container {
@@ -867,11 +729,11 @@ footer {
     
     .mobile-menu {
         display: block;
-        margin-left: 15px; /* Add some spacing from the left edge */
+        margin-left: 15px;
     }
     
     .logo {
-        margin-right: auto; /* Push logo to the right when menu is on left */
+        margin-right: auto;
     }
 }
 
