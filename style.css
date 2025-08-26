@@ -302,58 +302,6 @@ nav a:hover::after {
     color: var(--primary-color);
     font-size: 1.2rem;
 }
-/* Extra price cards */
-.price-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.price-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.price-card h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #1a3e2f;
-}
-
-.price-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.price-card ul li {
-  display: flex;
-  justify-content: space-between;
-  margin: 8px 0;
-  font-size: 15px;
-  color: #333;
-}
-
-.price-card ul li span {
-  font-weight: bold;
-  color: #000;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .services {
-    padding: 40px 15px;
-  }
-  .services .section-title {
-    font-size: 24px;
-  }
-  .service-card h3,
-  .price-card h3 {
-    font-size: 18px;
-  }
 
 
 /* Offers Section */
