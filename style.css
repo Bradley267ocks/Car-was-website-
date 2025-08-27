@@ -511,13 +511,22 @@ nav a:hover::after {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 250px; /* default image height for consistency */
+    object-fit: cover; /* crop to fit frame */
     display: block;
     transition: transform 0.4s ease;
+    border-radius: 10px;
 }
 
 .gallery-item img:hover {
     transform: scale(1.08);
+}
+
+/* ✅ Responsive: smaller height for mobile */
+@media (max-width: 600px) {
+    .gallery-item img {
+        height: 180px;
+    }
 }
 
 /* Contact Section */
