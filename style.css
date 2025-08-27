@@ -476,7 +476,6 @@ nav a:hover::after {
 .feature:hover i {
     color: white;
 }
-
 /* Gallery Section */
 .gallery-section {
     padding: 60px 20px;
@@ -496,9 +495,10 @@ nav a:hover::after {
     margin-bottom: 40px;
 }
 
+/* Force 3 columns on desktop */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -522,12 +522,24 @@ nav a:hover::after {
     transform: scale(1.08);
 }
 
-/* ✅ Responsive: smaller height for mobile */
+/* Responsive: 2 columns on tablets */
+@media (max-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: 1 column on mobile */
 @media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
     .gallery-item img {
         height: 180px;
     }
 }
+
 
 /* Contact Section */
 .contact-container {
