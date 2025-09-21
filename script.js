@@ -53,6 +53,27 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(nextSlide);
     }, 5000);
     
+    // Review Slider
+    const reviewSlides = document.querySelector('.review-slides');
+    const reviewSlideItems = document.querySelectorAll('.review-slide');
+    const prevBtn = document.querySelector('.review-nav-btn.prev');
+    const nextBtn = document.querySelector('.review-nav-btn.next');
+    let currentReviewSlide = 0;
+    
+    function showReviewSlide(index) {
+        if (index < 0) index = reviewSlideItems.length - 1;
+        if (index >= reviewSlideItems.length) index = 0;
+        
+        reviewSlides.style.transform = `translateX(-${index * 100}%)`;
+        currentReviewSlide = index;
+    }
+    
+    prevBtn.addEventListener('click', () => showReviewSlide(currentReviewSlide - 1));
+    nextBtn.addEventListener('click', () => showReviewSlide(currentReviewSlide + 1));
+    
+    // Auto slide reviews every 5 seconds
+    setInterval(() => showReviewSlide(currentReviewSlide + 1), 5000);
+    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -71,15 +92,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Lightbox Functions
-function openLightbox(img) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
-}
+    function openLightbox(img) {
+        document.getElementById("lightbox").style.display = "flex";
+        document.getElementById("lightbox-img").src = img.src;
+    }
 
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-}
-
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+    
+    // Add event listener for lightbox close
+    document.querySelector('.close-btn').addEventListener('click', closeLightbox);
+    
+    // Close lightbox when clicking outside the image
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+    
     // Form submission
     const contactForm = document.getElementById('washForm');
     if (contactForm) {
@@ -99,14 +130,10 @@ function closeLightbox() {
             contactForm.reset();
         });
     }
-    // Optional script — adds a simple log to confirm it's running
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("WhatsApp button is active.");
-});
-
-  // Animation on scroll
+    
+    // Animation on scroll
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.service-card, .offer-card, .about-image, .contact-form');
+        const elements = document.querySelectorAll('.service-card, .offer-card, .about-image, .contact-form, .review-card');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -120,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     
     // Set initial state for animated elements
-    document.querySelectorAll('.service-card, .offer-card, .about-image, .contact-form').forEach(element => {
+    document.querySelectorAll('.service-card, .offer-card, .about-image, .contact-form, .review-card').forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -128,4 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     window.addEventListener('scroll', animateOnScroll);
     window.addEventListener('load', animateOnScroll);
+    
+    // Optional script — adds a simple log to confirm it's running
+    console.log("Wash and Glow website is fully loaded and functional.");
 });
