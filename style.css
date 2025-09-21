@@ -362,7 +362,7 @@ nav a:hover::after {
     border-radius: 8px;
     text-align: center;
     position: relative;
-    box-shadow: var(--shadow);
+    box-shadow: var(--transition);
     transition: var(--transition);
 }
 
@@ -476,51 +476,6 @@ nav a:hover::after {
     color: white;
 }
 
-/* Gallery Section */
-.gallery {
-    padding: 60px 20px;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-.gallery .section-title {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.gallery .section-subtitle {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 40px;
-}
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.gallery-item {
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    cursor: pointer;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-    border-radius: 10px;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.08);
-}
-
 /* Reviews Section */
 .reviews {
     background-color: var(--light-color);
@@ -583,6 +538,11 @@ nav a:hover::after {
     color: var(--primary-color);
 }
 
+.review-rating {
+    color: #ffc107;
+    margin-top: 10px;
+}
+
 .review-nav {
     margin-top: 30px;
     display: flex;
@@ -605,6 +565,81 @@ nav a:hover::after {
 
 .review-nav-btn:hover {
     background-color: var(--accent-color);
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.gallery .section-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.gallery .section-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+    border-radius: 10px;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.08);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
 }
 
 /* Contact Section */
@@ -851,5 +886,9 @@ footer {
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    .reviews-slider {
+        height: 400px;
     }
 }
